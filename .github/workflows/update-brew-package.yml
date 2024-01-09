@@ -17,10 +17,11 @@ jobs:
           repository: small-hack/smol-k8s-lab
 
       - name: Get local tag
-        id: tag
-        uses: olegtarasov/get-tag@v2.1.2
+        id: localTag
+        run: |
+            echo "tag=$(git tag | tail -1)" >> "$GITHUB_OUTPUT"
 
       - name: Update Release
         run: |
-          sed -i 's/${{ steps.tag.outputs.tag }}/${{ steps.upstreamRelease.outputs.release }}/g' ./Formula/smol-k8s-lab.rb
+          sed -i 's/${{ steps.localTag.outputs.tag }}/${{ steps.upstreamRelease.outputs.release }}/g' ./Formula/smol-k8s-lab.rb
           cat ./Formula/smol-k8s-lab.rb
