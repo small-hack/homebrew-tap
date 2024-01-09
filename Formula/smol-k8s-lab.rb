@@ -1,3 +1,5 @@
+# this file is updated automatically via a github action based on the latest pip release
+
 class SmolK8sLab < Formula
   desc "Bootstrap simple projects on Kubernetes with kind, k3d, and k3s. This is a beta release"
   homepage "https://small-hack.github.io/smol-k8s-lab"

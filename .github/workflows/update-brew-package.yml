@@ -1,0 +1,26 @@
+on:
+  push:
+    branches: ['main']
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update_tap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get upstream release
+        id: upstreamRelease
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: small-hack/smol-k8s-lab
+
+      - name: Get local tag
+        id: tag
+        uses: devops-actions/action-get-tag@v1.0.1
+
+      - name: Update Release
+        run: |
+          sed -i 's/${{ steps.tag.outputs.tag }}/${{ steps.upstreamRelease.outputs.release }}/g' ./Formula/smol-k8s-lab.rb
+          cat ./Formula/smol-k8s-lab.rb
