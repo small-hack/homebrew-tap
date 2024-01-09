@@ -19,8 +19,8 @@ jobs:
       - name: Get local tag
         id: localTag
         run: |
-            echo "tag=$(git tag | tail -1)"
-            echo "tag=$(git tag | tail -1)" >> "$GITHUB_OUTPUT"
+            echo "tag=`echo $(git describe --tags --abbrev=0)`"
+            echo "tag=`echo $(git describe --tags --abbrev=0)`" >> "$GITHUB_OUTPUT"
 
       - name: Update Release
         run: |
