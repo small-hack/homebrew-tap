@@ -12,14 +12,14 @@ class SmolK8sLab < Formula
   depends_on "k3d"
   depends_on "kind"
   depends_on "kubernetes-cli"
-  depends_on "krew" :optional
+  depends_on "krew"
   depends_on "helm"
   depends_on "docker"
-  depends_on "bitwarden-cli" :optional
+  depends_on "bitwarden-cli"
   # k8s dashboard tui
-  depends_on "k9s" :optional
-  depends_on "minio-mc" :optional
-  depends_on "cilium-cli" :optional
+  depends_on "k9s"
+  depends_on "minio-mc"
+  depends_on "cilium-cli"
 
   def python3
     "python3.12"
