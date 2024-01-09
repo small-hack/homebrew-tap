@@ -28,7 +28,7 @@ class SmolK8sLab < Formula
     "python3.12"
   end
 
-  resource "smol-k9s-lab" do
+  resource "smol-k8s-lab" do
     url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v2.0.0b8.tar.gz"
     sha256 "48b44f4f22df471f50a166f56035c514617927c8afefa6e012790dbe05e8af5d"
   end
