@@ -45,8 +45,8 @@ jobs:
 
           export sha=`echo $(shasum -a 256 ${{ steps.upstreamRelease.outputs.release }}.tar.gz | cut -d ' ' -f 1)`
           export old_sha=`echo $(grep sha ./Formula/smol-k8s-lab.rb | awk -F ' ' '{print $2}' | sed 's/"//g')`
-          echo -e " old sha: $old_sha \nnew sha: $sha"
-          sed -i "s/$old_sha/$sha/" ./Formula/smol-k8s-lab.rb && grep sha ./Formula/smol-k8s-lab.rb
+          echo -e "old sha: $old_sha \nnew sha: $sha"
+          sed -i "s/$old_sha/$sha/" ./Formula/smol-k8s-lab.rb
 
           export file_changed=`echo $(git diff --quiet --exit-code ./Formula/smol-k8s-lab.rb)`
           if [[ $file_changed -ne 0 ]]; then
