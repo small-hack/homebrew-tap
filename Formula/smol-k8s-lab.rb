@@ -4,7 +4,7 @@ class SmolK8sLab < Formula
   desc "Bootstrap simple projects on Kubernetes with kind, k3d, and k3s. This is a beta release"
   homepage "https://small-hack.github.io/smol-k8s-lab"
   url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v2.0.0b8.tar.gz"
-  sha256 "c4cd30c326f750b1b28e981163f3c97966625990b9ceb9c90b8fbc477fe15820"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   license "AGPL-3.0"
 
   depends_on "python@3.12"
@@ -26,7 +26,7 @@ class SmolK8sLab < Formula
   end
 
   def install
-    system  python3, "-m", "pip", "install", "smol-k8s-lab==2.0.0b7"
+    system  python3, "-m", "pip", "install", "smol-k8s-lab==2.0.0b8"
   end
 
   test do
