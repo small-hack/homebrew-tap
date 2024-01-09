@@ -37,7 +37,9 @@ jobs:
         run: |
           echo -e "\n--------------------------------------------"
           echo "replacing latest version\n"
-          sed -i 's/${{ steps.localTag.outputs.tag }}/${{ steps.upstreamRelease.outputs.release }}/g' ./Formula/smol-k8s-lab.rb && cat ./Formula/smol-k8s-lab.rb
+          export no_v_local=${{ steps.localTag.outputs.tag }}
+          export no_v_remote=${{ steps.upstreamRelease.outputs.release }}
+          sed -i "s/$no_v_local/$no_v_remote/g" ./Formula/smol-k8s-lab.rb && cat ./Formula/smol-k8s-lab.rb
 
           echo -e "\n--------------------------------------------"
           echo -e "replacing the sha of old version with new version\n"
