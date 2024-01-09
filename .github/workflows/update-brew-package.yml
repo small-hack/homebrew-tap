@@ -1,6 +1,13 @@
 on:
   schedule:
     - cron: '0 0 * * *'
+  workflow_dispatch:
+    inputs:
+      message:
+        description: "anything you'd like recorded for this workflow run"
+        required: false
+        type: "string"
+        default: "manually run workflow"
 
 permissions:
   contents: write
