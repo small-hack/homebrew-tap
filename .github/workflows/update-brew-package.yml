@@ -12,17 +12,16 @@ jobs:
         with:
           fetch-tags: true
 
+      - name: Get local tag
+        id: localTag
+        run: |
+            echo "tag=`echo $(git tag)`"
+            echo "tag=`echo $(git describe --tags --abbrev=0)`" >> "$GITHUB_OUTPUT"
       - name: Get upstream release
         id: upstreamRelease
         uses: pozetroninc/github-action-get-latest-release@master
         with:
           repository: small-hack/smol-k8s-lab
-
-      - name: Get local tag
-        id: localTag
-        run: |
-            echo "tag=`echo $(git describe --tags --abbrev=0)`"
-            echo "tag=`echo $(git describe --tags --abbrev=0)`" >> "$GITHUB_OUTPUT"
 
       - name: Update Release
         run: |
