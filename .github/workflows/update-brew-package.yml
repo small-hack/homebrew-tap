@@ -36,20 +36,25 @@ jobs:
       - name: Update Release Version
         run: |
           echo -e "\n--------------------------------------------"
-          echo "replacing latest version"
+          echo "replacing latest version\n"
           sed -i 's/${{ steps.localTag.outputs.tag }}/${{ steps.upstreamRelease.outputs.release }}/g' ./Formula/smol-k8s-lab.rb && cat ./Formula/smol-k8s-lab.rb
 
           echo -e "\n--------------------------------------------"
-          echo -e "\nreplacing the sha of old version with new version"
+          echo -e "replacing the sha of old version with new version\n"
           curl -O https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/${{ steps.upstreamRelease.outputs.release }}.tar.gz
+
           echo "sha=`echo $(shasum -a 256 ${{ steps.upstreamRelease.outputs.release }}.tar.gz | cut -d ' ' -f 1)`" >> $GITHUB_ENV
+          export sha=`echo $(shasum -a 256 ${{ steps.upstreamRelease.outputs.release }}.tar.gz | cut -d ' ' -f 1)`
+
           echo "old_sha=`echo $(grep sha ./Formula/smol-k8s-lab.rb | awk -F ' ' '{print $2}' | sed 's/"//g')`" >> $GITHUB_ENV
-          echo "old sha: ${{ env.old_sha }} new sha: ${{ env.sha }}"
+          export old_sha=`echo $(grep sha ./Formula/smol-k8s-lab.rb | awk -F ' ' '{print $2}' | sed 's/"//g')`
+
+          echo "old sha: $old_sha new sha: $sha"
           sed -i 's/${{ env.old_sha }}/${{ env.sha }}/' ./Formula/smol-k8s-lab.rb && grep sha ./Formula/smol-k8s-lab.rb
 
           if [ $(git diff --exit-code ./Formula/smol-k8s-lab.rb) -ne 0]; then
               echo -e "\n--------------------------------------------"
-              echo -e "\ntagging and pushing to main branch"
+              echo -e "tagging and pushing to main branch\n"
               git tag ${{ steps.upstreamRelease.outputs.release }}
               git config --global user.email "jessebot@linux.com" && git config --global user.name "jessebot"
               git commit -m "Updating latest package from ${{ steps.localTag.outputs.tag }} to ${{ steps.upstreamRelease.outputs.release }}" ./Formula/smol-k8s-lab.rb
