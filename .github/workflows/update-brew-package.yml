@@ -18,7 +18,7 @@ jobs:
 
       - name: Get local tag
         id: tag
-        uses: WyriHaximus/github-action-get-previous-tag@v1
+        uses: olegtarasov/get-tag@v2.1.2
 
       - name: Update Release
         run: |
