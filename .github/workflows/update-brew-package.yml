@@ -49,11 +49,11 @@ jobs:
           echo "old_sha=`echo $(grep sha ./Formula/smol-k8s-lab.rb | awk -F ' ' '{print $2}' | sed 's/"//g')`" >> $GITHUB_ENV
           export old_sha=`echo $(grep sha ./Formula/smol-k8s-lab.rb | awk -F ' ' '{print $2}' | sed 's/"//g')`
 
-          echo "old sha: $old_sha new sha: $sha"
-          sed -i 's/${{ env.old_sha }}/${{ env.sha }}/' ./Formula/smol-k8s-lab.rb && grep sha ./Formula/smol-k8s-lab.rb
+          echo "old sha: $old_sha\nnew sha: $sha"
+          sed -i "s/$old_sha/$sha/" ./Formula/smol-k8s-lab.rb && grep sha ./Formula/smol-k8s-lab.rb
 
           export file_changed=$(git diff --exit-code ./Formula/smol-k8s-lab.rb)
-          if [ $file_changed -ne 0 ]; then
+          if [[ $file_changed -ne 0 ]]; then
               echo -e "\n--------------------------------------------"
               echo -e "tagging and pushing to main branch\n"
               git tag ${{ steps.upstreamRelease.outputs.release }}
