@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '0 0 * * *'
 
+permissions:
+  contents: write
+
 jobs:
   update_tap:
     runs-on: ubuntu-latest
@@ -28,6 +31,8 @@ jobs:
         run: |
           sed -i 's/${{ steps.localTag.outputs.tag }}/${{ steps.upstreamRelease.outputs.release }}/g' ./Formula/smol-k8s-lab.rb
           cat ./Formula/smol-k8s-lab.rb
+          git config --global user.email "jessebot@linux.com"
+          git config --global user.name "jessebot"
           git commit -m "Updating latest package from ${{ steps.localTag.outputs.tag }} to ${{ steps.upstreamRelease.outputs.release }}" ./Formula/smol-k8s-lab.rb
           git push
           git tag ${{ steps.upstreamRelease.outputs.release }}
