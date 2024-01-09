@@ -7,7 +7,7 @@ on:
         description: "anything you'd like recorded for this workflow run"
         required: false
         type: "string"
-        default: "manually run workflow"
+        default: "user manually triggered workflow"
 
 permissions:
   contents: write
@@ -26,19 +26,26 @@ jobs:
         run: |
             echo "tag=`echo $(git describe --tags --abbrev=0)`"
             echo "tag=`echo $(git describe --tags --abbrev=0)`" >> "$GITHUB_OUTPUT"
+
       - name: Get upstream release
         id: upstreamRelease
         uses: pozetroninc/github-action-get-latest-release@master
         with:
           repository: small-hack/smol-k8s-lab
 
-      - name: Update Release
+      - name: Update Release Version
         run: |
-          sed -i 's/${{ steps.localTag.outputs.tag }}/${{ steps.upstreamRelease.outputs.release }}/g' ./Formula/smol-k8s-lab.rb
-          cat ./Formula/smol-k8s-lab.rb
-          git config --global user.email "jessebot@linux.com"
-          git config --global user.name "jessebot"
-          git commit -m "Updating latest package from ${{ steps.localTag.outputs.tag }} to ${{ steps.upstreamRelease.outputs.release }}" ./Formula/smol-k8s-lab.rb
-          git push
+          echo "replacing latest version"
+          sed -i 's/${{ steps.localTag.outputs.tag }}/${{ steps.upstreamRelease.outputs.release }}/g' ./Formula/smol-k8s-lab.rb && cat ./Formula/smol-k8s-lab.rb
+
+          echo "replacing the sha of old version with new version"
+          curl -O https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/${{ steps.upstreamRelease.outputs.release }}.tar.gz
+          echo "sha=$(shasum -a 256 ${{ steps.upstreamRelease.outputs.release }}.tar.gz | cut -d ' ' -f 1)" >> $GITHUB_ENV
+          echo "old_sha=$(grep sha ./Formula/smol-k8s-lab.rb | awk -F ' ' '{print $2}' | sed 's/"//g')" >> $GITHUB_ENV
+          sed -i 's/${{ env.old_sha }}/${{ env.sha }}/' ./Formula/smol-k8s-lab.rb && grep sha ./Formula/smol-k8s-lab.rb
+
+          echo "tagging and pushing to main branch"
           git tag ${{ steps.upstreamRelease.outputs.release }}
-          git push --tags
+          git config --global user.email "jessebot@linux.com" && git config --global user.name "jessebot"
+          git commit -m "Updating latest package from ${{ steps.localTag.outputs.tag }} to ${{ steps.upstreamRelease.outputs.release }}" ./Formula/smol-k8s-lab.rb
+          git push && git push --tags
