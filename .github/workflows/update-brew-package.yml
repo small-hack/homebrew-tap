@@ -43,16 +43,12 @@ jobs:
           echo -e "replacing the sha of old version with new version\n"
           curl -O https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/${{ steps.upstreamRelease.outputs.release }}.tar.gz
 
-          echo "sha=`echo $(shasum -a 256 ${{ steps.upstreamRelease.outputs.release }}.tar.gz | cut -d ' ' -f 1)`" >> $GITHUB_ENV
           export sha=`echo $(shasum -a 256 ${{ steps.upstreamRelease.outputs.release }}.tar.gz | cut -d ' ' -f 1)`
-
-          echo "old_sha=`echo $(grep sha ./Formula/smol-k8s-lab.rb | awk -F ' ' '{print $2}' | sed 's/"//g')`" >> $GITHUB_ENV
           export old_sha=`echo $(grep sha ./Formula/smol-k8s-lab.rb | awk -F ' ' '{print $2}' | sed 's/"//g')`
-
-          echo "old sha: $old_sha\nnew sha: $sha"
+          echo -e " old sha: $old_sha \nnew sha: $sha"
           sed -i "s/$old_sha/$sha/" ./Formula/smol-k8s-lab.rb && grep sha ./Formula/smol-k8s-lab.rb
 
-          export file_changed=$(git diff --exit-code ./Formula/smol-k8s-lab.rb)
+          export file_changed=`echo $(git diff --exit-code ./Formula/smol-k8s-lab.rb)`
           if [[ $file_changed -ne 0 ]]; then
               echo -e "\n--------------------------------------------"
               echo -e "tagging and pushing to main branch\n"
