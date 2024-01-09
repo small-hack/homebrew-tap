@@ -9,18 +9,17 @@ class SmolK8sLab < Formula
 
   depends_on "python@3.12"
   depends_on "argocd"
-  depends_on "k3d" :optional
+  depends_on "k3d"
   depends_on "kind"
-  depends_on "kubectl"
+  depends_on "kubernetes-cli"
   depends_on "krew" :optional
   depends_on "helm"
-  depends_on "docker" :optional
-  # bitwarden cli
-  depends_on "bw" :optional
+  depends_on "docker"
+  depends_on "bitwarden-cli" :optional
   # k8s dashboard tui
   depends_on "k9s" :optional
-  # minio cli
-  depends_on "mc" :optional
+  depends_on "minio-mc" :optional
+  depends_on "cilium-cli" :optional
 
   def python3
     "python3.12"
