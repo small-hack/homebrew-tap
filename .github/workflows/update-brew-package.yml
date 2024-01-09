@@ -50,7 +50,7 @@ jobs:
           echo -e "old sha: $old_sha \nnew sha: $sha"
           sed -i "s/$old_sha/$sha/" ./Formula/smol-k8s-lab.rb
 
-          export file_changed=`echo $(git diff --quiet --exit-code ./Formula/smol-k8s-lab.rb)`
+          export file_changed=`echo $(git diff --quiet --exit-code ./Formula/smol-k8s-lab.rb && echo $?)`
           echo "file_changed: $file_changed"
           if [[ $file_changed -ne 0 ]]; then
               echo -e "\n--------------------------------------------"
