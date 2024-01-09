@@ -43,12 +43,11 @@ jobs:
 
           echo -e "\n--------------------------------------------"
           echo -e "replacing the sha of old version with new version\n"
-          curl -O https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/${{ steps.upstreamRelease.outputs.release }}.tar.gz
-          echo "ls -hal ${{ steps.upstreamRelease.outputs.release }}.tar.gz"
-          ls -hal ${{ steps.upstreamRelease.outputs.release }}.tar.gz
 
-          export sha=`echo -n $(shasum -a 256 ${{ steps.upstreamRelease.outputs.release }}.tar.gz | cut -d ' ' -f 1)`
           export old_sha=`echo -n $(grep sha ./Formula/smol-k8s-lab.rb | awk -F ' ' '{print $2}' | sed 's/"//g')`
+          curl -sfLO https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/${{ steps.upstreamRelease.outputs.release }}.tar.gz
+          export sha=`echo -n $(shasum -a 256 ${{ steps.upstreamRelease.outputs.release }}.tar.gz | cut -d ' ' -f 1)`
+
           echo -e "old sha: $old_sha \nnew sha: $sha"
           sed -i "s/$old_sha/$sha/" ./Formula/smol-k8s-lab.rb
 
