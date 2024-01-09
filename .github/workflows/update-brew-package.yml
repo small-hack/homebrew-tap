@@ -16,7 +16,7 @@ jobs:
       - name: Get local tag
         id: localTag
         run: |
-            echo "tag=`echo $(git tag)`"
+            echo "tag=`echo $(git describe --tags --abbrev=0)`"
             echo "tag=`echo $(git describe --tags --abbrev=0)`" >> "$GITHUB_OUTPUT"
       - name: Get upstream release
         id: upstreamRelease
@@ -28,3 +28,7 @@ jobs:
         run: |
           sed -i 's/${{ steps.localTag.outputs.tag }}/${{ steps.upstreamRelease.outputs.release }}/g' ./Formula/smol-k8s-lab.rb
           cat ./Formula/smol-k8s-lab.rb
+          git commit -m "Updating latest package from ${{ steps.localTag.outputs.tag }} to ${{ steps.upstreamRelease.outputs.release }}" ./Formula/smol-k8s-lab.rb
+          git push
+          git tag ${{ steps.upstreamRelease.outputs.release }}
+          git push --tags
