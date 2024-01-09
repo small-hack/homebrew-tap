@@ -12,6 +12,7 @@ class SmolK8sLab < Formula
   depends_on "k3d" :optional
   depends_on "kind"
   depends_on "kubectl"
+  depends_on "krew" :optional
   depends_on "helm"
   depends_on "docker" :optional
   # bitwarden cli
