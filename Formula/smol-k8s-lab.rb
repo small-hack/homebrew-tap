@@ -14,7 +14,6 @@ class SmolK8sLab < Formula
   depends_on "kubernetes-cli"
   depends_on "krew"
   depends_on "helm"
-  depends_on "docker"
   depends_on "bitwarden-cli"
   # k8s dashboard tui
   depends_on "k9s"
