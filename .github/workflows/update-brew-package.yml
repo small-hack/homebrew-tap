@@ -52,7 +52,8 @@ jobs:
           echo "old sha: $old_sha new sha: $sha"
           sed -i 's/${{ env.old_sha }}/${{ env.sha }}/' ./Formula/smol-k8s-lab.rb && grep sha ./Formula/smol-k8s-lab.rb
 
-          if [ $(git diff --exit-code ./Formula/smol-k8s-lab.rb) -ne 0]; then
+          export file_changed=$(git diff --exit-code ./Formula/smol-k8s-lab.rb)
+          if [ $file_changed -ne 0 ]; then
               echo -e "\n--------------------------------------------"
               echo -e "tagging and pushing to main branch\n"
               git tag ${{ steps.upstreamRelease.outputs.release }}
