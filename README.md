@@ -5,6 +5,6 @@ A GitHub Action runs nightly in this repo to pull the latest release from pip an
 # TLDR
 
 ```bash
-brew tap small-hack/homebrew-smol-k8s-lab
+brew tap small-hack/homebrew-tap
 brew install smol-k8s-lab
 ```
