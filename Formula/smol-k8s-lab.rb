@@ -5,8 +5,8 @@ class SmolK8sLab < Formula
 
   desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
-  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "9ab208859e53a4a2f3d695fe5fdffc254844e38d3cc5cd19969e60dbd56625c8"
+  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v2.0.1.tar.gz"
+  sha256 "dba8e74bc2f57d44c866c2a03a89141593d1eac79293324c5e17a4aa55bb9b53"
   license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
@@ -128,7 +128,7 @@ class SmolK8sLab < Formula
 
   resource "ruamel-yaml-clib" do
     url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa0240c53a7218c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
-    sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
+    sha256 "beb2.0.14003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
   end
 
   resource "smol_k8s_lab" do
