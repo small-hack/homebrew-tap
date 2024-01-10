@@ -27,6 +27,7 @@ class SmolK8sLab < Formula
   depends_on "python-requests"
   depends_on "python-rich"
   depends_on "pyyaml"
+  depends_on "python-markdown-it-py"
   # this is for bcrypt
   depends_on "rust" => :build
 
@@ -83,11 +84,6 @@ class SmolK8sLab < Formula
   resource "linkify-it-py" do
     url "https://files.pythonhosted.org/packages/8d/fd/73bb30ec2b3cd952fe139a79a40ce5f5fd0280dd2cc1de94c93ea6a714d2/linkify-it-py-2.0.2.tar.gz"
     sha256 "19f3060727842c254c808e99d465c80c49d2c7306788140987a1a7a29b0d6ad2"
-  end
-
-  resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/38/71/3b932df36c1a044d397a1f92d1cf91ee0a503d91e470cbd670aa66b07ed0/markdown-it-py-3.0.0.tar.gz"
-    sha256 "e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"
   end
 
   resource "mdit-py-plugins" do
