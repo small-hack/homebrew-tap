@@ -1,9 +1,9 @@
-# this file is updated automatically via a github action based on the latest pip release
+# this file is updated automatically via a github action based on the latest smol-k8s-lab pip release
 
 class SmolK8sLab < Formula
   include Language::Python::Virtualenv
 
-  desc "Bootstrap simple projects on Kubernetes with kind, k3d, and k3s. This is a beta release"
+  desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
   url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v2.0.0.tar.gz"
   sha256 "9ab208859e53a4a2f3d695fe5fdffc254844e38d3cc5cd19969e60dbd56625c8"
