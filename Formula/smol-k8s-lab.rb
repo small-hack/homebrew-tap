@@ -13,6 +13,7 @@ class SmolK8sLab < Formula
   depends_on "argocd"
   depends_on "bitwarden-cli"
   depends_on "cilium-cli"
+  depends_on "cffi"
   depends_on "helm"
   depends_on "k3d"
   depends_on "k9s"
@@ -24,12 +25,21 @@ class SmolK8sLab < Formula
   depends_on "python@3.12"
   depends_on "python-click"
   depends_on "python-cryptography"
-  depends_on "python-requests"
-  depends_on "python-rich"
-  depends_on "pyyaml"
+  depends_on "python-charset-normalizer"
+  depends_on "python-dateutil"
   depends_on "python-markdown-it-py"
-  # this is for bcrypt
+  depends_on "python-oauthlib"
+  depends_on "python-requests"
+  depends_on "python-requests-oauthlib"
+  depends_on "python-rich"
+  depends_on "python-typing-extensions"
+  depends_on "python-urllib3"
+  depends_on "python-websocket-client"
+  depends_on "pyyaml"
+  depends_on "pygments"
+  # rust is needed for bcrypt
   depends_on "rust" => :build
+  depends_on "six"
 
   resource "argon2-cffi" do
     url "https://files.pythonhosted.org/packages/31/fa/57ec2c6d16ecd2ba0cf15f3c7d1c3c2e7b5fcb83555ff56d7ab10888ec8f/argon2_cffi-23.1.0.tar.gz"
@@ -54,16 +64,6 @@ class SmolK8sLab < Formula
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/d4/91/c89518dd4fe1f3a4e3f6ab7ff23cb00ef2e8c9adf99dacc618ad5e068e28/certifi-2023.11.17.tar.gz"
     sha256 "9b469f3a900bf28dc19b8cfbf8019bf47f7fdd1a65a1d4ffb98fc14166beb4d1"
-  end
-
-  resource "cffi" do
-    url "https://files.pythonhosted.org/packages/68/ce/95b0bae7968c65473e1298efb042e10cafc7bafc14d9e4f154008241c91d/cffi-1.16.0.tar.gz"
-    sha256 "bcb3ef43e58665bbda2fb198698fcae6776483e0c4a631aa5647806c25e02cc0"
-  end
-
-  resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
-    sha256 "f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5"
   end
 
   resource "google-auth" do
@@ -101,11 +101,6 @@ class SmolK8sLab < Formula
     sha256 "4971dfb1a71eeefd38e1ce2dc7edc4e6eb0f07f1c1d6d70c15457e3280cfc4b9"
   end
 
-  resource "oauthlib" do
-    url "https://files.pythonhosted.org/packages/6d/fa/fbf4001037904031639e6bfbfc02badfc7e12f137a8afa254df6c4c8a670/oauthlib-3.2.2.tar.gz"
-    sha256 "9859c40929662bec5d64f34d01c99e093149682a3f38915dc0655d5a633dd918"
-  end
-
   resource "pyasn1" do
     url "https://files.pythonhosted.org/packages/ce/dc/996e5446a94627fe8192735c20300ca51535397e31e7097a3cc80ccf78b7/pyasn1-0.5.1.tar.gz"
     sha256 "6d391a96e59b23130a5cfa74d6fd7f388dbbe26cc8f1edf39fdddf08d9d6676c"
@@ -131,39 +126,9 @@ class SmolK8sLab < Formula
     sha256 "758788018ab8faaddc0984e1ea05ff330d3c64be663c513cc1f105f6a3066dab"
   end
 
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
-    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
-  end
-
   resource "PyJWT" do
     url "https://files.pythonhosted.org/packages/30/72/8259b2bccfe4673330cea843ab23f86858a419d8f1493f66d413a76c7e3b/PyJWT-2.8.0.tar.gz"
     sha256 "57e28d156e3d5c10088e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"
-  end
-
-  resource "python-dateutil" do
-    url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
-    sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
-    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
-  end
-
-  resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
-  end
-
-  resource "requests-oauthlib" do
-    url "https://files.pythonhosted.org/packages/95/52/531ef197b426646f26b53815a7d2a67cb7a331ef098bb276db26a68ac49f/requests-oauthlib-1.3.1.tar.gz"
-    sha256 "75beac4a47881eeb94d5ea5d6ad31ef88856affe2332b9aafb52c6452ccf0d7a"
-  end
-
-  resource "rich" do
-    url "https://files.pythonhosted.org/packages/a7/ec/4a7d80728bd429f7c0d4d51245287158a1516315cadbb146012439403a9d/rich-13.7.0.tar.gz"
-    sha256 "5cb5123b5cf9ee70584244246816e9114227e0b98ad9176eede6ad54bf5403fa"
   end
 
   resource "rsa" do
@@ -186,11 +151,6 @@ class SmolK8sLab < Formula
     sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
   end
 
-  resource "six" do
-    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
-    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
-  end
-
   resource "smol_k8s_lab" do
     url "https://files.pythonhosted.org/packages/81/59/0c598c1981e4dce0634fce6643cd0f8a8967095e68232800ce5c6ac12a9f/smol_k8s_lab-2.0.0.tar.gz"
     sha256 "9ea63d37a2eb40281a1cea9ae0f3b9784209c5e02e6e2a3dfafb07a141c8ca9c"
@@ -201,24 +161,9 @@ class SmolK8sLab < Formula
     sha256 "4b82e317884bb1092f693f474c319ceb068b5a0b128b121f1aa53a2d48b4b80c"
   end
 
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
-    sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
-  end
-
   resource "uc-micro-py" do
     url "https://files.pythonhosted.org/packages/75/db/241444fe6df6970a4c18d227193cad77fab7cec55d98e296099147de017f/uc-micro-py-1.0.2.tar.gz"
     sha256 "30ae2ac9c49f39ac6dce743bd187fcd2b574b16ca095fa74cd9396795c954c54"
-  end
-
-  resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/0c/39/64487bf07df2ed854cc06078c27c0d0abc59bd27b32232876e403c333a08/urllib3-1.26.18.tar.gz"
-    sha256 "f8ecc1bba5667413457c529ab955bf8c67b45db799d159066261719e328580a0"
-  end
-
-  resource "websocket-client" do
-    url "https://files.pythonhosted.org/packages/20/07/2a94288afc0f6c9434d6709c5320ee21eaedb2f463ede25ed9cf6feff330/websocket-client-1.7.0.tar.gz"
-    sha256 "10e511ea3a8c744631d3bd77e61eb17ed09304c413ad42cf6ddfa4c7787e8fe6"
   end
 
   resource "xdg-base-dirs" do
