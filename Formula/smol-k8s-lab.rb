@@ -185,12 +185,7 @@ class SmolK8sLab < Formula
     sha256 "7a7aedcc055d45c004d38b756f58474ebefb106851f4ce56ce58415709784350"
   end
 
-  resource "ruamel.yaml" do
-    url "https://files.pythonhosted.org/packages/82/43/fa976e03a4a9ae406904489119cd7dd4509752ca692b2e0a19491ca1782c/ruamel.yaml-0.18.5.tar.gz"
-    sha256 "61917e3a35a569c1133a8f772e1226961bf5a1198bea7e23f06a0841dea1ab0e"
-  end
-
-  resource "ruamel.yaml.clib" do
+  resource "ruamel-yaml-clib" do
     url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa0240c53a7218c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
     sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
   end
@@ -240,7 +235,9 @@ class SmolK8sLab < Formula
   end
 
   def install
+    # virtualenv_install_with_resources
     venv = virtualenv_create(libexec, python3)
+    venv.pip_install_and_link resources
     venv.pip_install_and_link buildpath
   end
 
