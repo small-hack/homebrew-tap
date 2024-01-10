@@ -7,7 +7,7 @@ class SmolK8sLab < Formula
   homepage "https://small-hack.github.io/smol-k8s-lab"
   url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v2.0.0.tar.gz"
   sha256 "9ab208859e53a4a2f3d695fe5fdffc254844e38d3cc5cd19969e60dbd56625c8"
-  license "AGPL-3.0-or-later"
+  license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
   depends_on "argocd"
