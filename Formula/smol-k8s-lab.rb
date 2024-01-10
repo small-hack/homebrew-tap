@@ -132,8 +132,8 @@ class SmolK8sLab < Formula
   end
 
   resource "smol_k8s_lab" do
-    url "https://files.pythonhosted.org/packages/81/59/0c598c1981e4dce0634fce6643cd0f8a8967095e68232800ce5c6ac12a9f/smol_k8s_lab-2.0.0.tar.gz"
-    sha256 "9ea63d37a2eb40281a1cea9ae0f3b9784209c5e02e6e2a3dfafb07a141c8ca9c"
+    url "https://files.pythonhosted.org/packages/62/da/3ab88a7d242976972b85c069c6ddea1ab744853a25c800190e94868f810d/smol_k8s_lab-2.0.1.tar.gz"
+    sha256 "fb0e2e8d5ede2aafdeeced1fec25d48539f936de7021a0efddeae88a84afdd23"
   end
 
   resource "textual" do
