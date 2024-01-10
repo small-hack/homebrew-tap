@@ -128,7 +128,7 @@ class SmolK8sLab < Formula
 
   resource "ruamel-yaml-clib" do
     url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa0240c53a7218c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
-    sha256 "beb2.0.14003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
+    sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
   end
 
   resource "smol_k8s_lab" do
