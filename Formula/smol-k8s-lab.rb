@@ -22,6 +22,7 @@ class SmolK8sLab < Formula
   depends_on "kubernetes-cli"
   depends_on "minio-mc"
   depends_on "poetry" => :build
+  depends_on "pycparser"
   depends_on "python@3.12"
   depends_on "python-cachetools"
   depends_on "python-certifi"
@@ -93,11 +94,6 @@ class SmolK8sLab < Formula
   resource "pyasn1-modules" do
     url "https://files.pythonhosted.org/packages/3b/e4/7dec823b1b5603c5b3c51e942d5d9e65efd6ff946e713a325ed4146d070f/pyasn1_modules-0.3.0.tar.gz"
     sha256 "5bd01446b736eb9d31512a30d46c1ac3395d676c6f3cafa4c03eb54b9925631c"
-  end
-
-  resource "pycparser" do
-    url "https://files.pythonhosted.org/packages/5e/0b/95d387f5f4433cb0f53ff7ad859bd2c6051051cebbb564f139a999ab46de/pycparser-2.21.tar.gz"
-    sha256 "e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206"
   end
 
   resource "pycryptodome" do
