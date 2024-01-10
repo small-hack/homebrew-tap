@@ -175,12 +175,12 @@ class SmolK8sLab < Formula
     sha256 "e38464a49c6c85d7f1351b0126661487a7e0a14a50f1675ec50eb34d4f20ef21"
   end
 
-  resource "ruamel.yaml" do
+  resource "ruamel-yaml" do
     url "https://files.pythonhosted.org/packages/82/43/fa976e03a4a9ae406904489119cd7dd4509752ca692b2e0a19491ca1782c/ruamel.yaml-0.18.5.tar.gz"
     sha256 "61917e3a35a569c1133a8f772e1226961bf5a1198bea7e23f06a0841dea1ab0e"
   end
 
-  resource "ruamel.yaml.string" do
+  resource "ruamel-yaml-string" do
     url "https://files.pythonhosted.org/packages/11/47/fa7c06b8f9946fc9192cb4d944367f31197715915f5e71363909e8c35eb7/ruamel.yaml.string-0.1.1.tar.gz"
     sha256 "7a7aedcc055d45c004d38b756f58474ebefb106851f4ce56ce58415709784350"
   end
