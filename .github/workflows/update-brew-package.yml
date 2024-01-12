@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  update_tap:
+  update_smol_k8s_lab:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -36,9 +36,9 @@ jobs:
       - name: Update Release Version
         run: |
           echo -e "\n--------------------------------------------"
-          echo "replacing latest version\n"
           export no_v_local=`echo ${{ steps.localTag.outputs.tag }} | tr -d 'v'`
           export no_v_remote=`echo ${{ steps.upstreamRelease.outputs.release }} | tr -d 'v'`
+          echo "replacing $no_v_local with $no_v_remote"
           sed -i "s/$no_v_local/$no_v_remote/g" ./Formula/smol-k8s-lab.rb && cat ./Formula/smol-k8s-lab.rb
 
           echo -e "\n--------------------------------------------"
