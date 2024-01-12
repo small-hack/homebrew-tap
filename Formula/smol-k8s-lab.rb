@@ -62,8 +62,8 @@ class SmolK8sLab < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/bc/c0/b5119831db4888e703b2adaa912709931181678ae3a50ca08d51a3904765/google-auth-2.26.1.tar.gz"
-    sha256 "54385acca5c0fbdda510cd8585ba6f3fcb06eeecf8a6ecca39d3ee148b092590"
+    url "https://files.pythonhosted.org/packages/9a/a7/96f6b41c736ac080844a96d34896019127427e66f59d6b03e001d243c6c6/google-auth-2.26.2.tar.gz"
+    sha256 "97327dbbf58cccb58fc5a1712bba403ae76668e64814eb30f7316f7e27126b81"
   end
 
   resource "kubernetes" do
@@ -132,8 +132,8 @@ class SmolK8sLab < Formula
   end
 
   resource "smol_k8s_lab" do
-    url "https://files.pythonhosted.org/packages/62/da/3ab88a7d242976972b85c069c6ddea1ab744853a25c800190e94868f810d/smol_k8s_lab-2.0.1.tar.gz"
-    sha256 "fb0e2e8d5ede2aafdeeced1fec25d48539f936de7021a0efddeae88a84afdd23"
+    url "https://files.pythonhosted.org/packages/d0/61/9fdd1ea17fb58e92206cf55ebe7046f9141f5dc98666ed33cd0868a6a7e4/smol_k8s_lab-2.0.2.tar.gz"
+    sha256 "9c53628d628d804f11b10c106dd948c577f8de0a4bf540f0ea2f47165716b7a5"
   end
 
   resource "textual" do
