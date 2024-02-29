@@ -5,8 +5,8 @@ class SmolK8sLab < Formula
 
   desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
-  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v2.0.5.tar.gz"
-  sha256 "9f5f4baa3a89524c4113e6ac83d69888397553b45a61c0373b8e798573843ba3"
+  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v2.1.0.tar.gz"
+  sha256 "a7ba882a67b6e648a882ca19d55461eb024574c9958048950081e03d7e9e7fd1"
   license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
@@ -72,7 +72,7 @@ class SmolK8sLab < Formula
   end
 
   resource "linkify-it-py" do
-    url "https://files.pythonhosted.org/packages/8d/fd/73bb30ec2b3cd952fe139a79a40ce5f5fd0280dd2cc1de94c93ea6a714d2/linkify-it-py-2.0.5.tar.gz"
+    url "https://files.pythonhosted.org/packages/8d/fd/73bb30ec2b3cd952fe139a79a40ce5f5fd0280dd2cc1de94c93ea6a714d2/linkify-it-py-2.1.0.tar.gz"
     sha256 "19f3060727842c254c808e99d465c80c49d2c7306788140987a1a7a29b0d6ad2"
   end
 
@@ -127,12 +127,12 @@ class SmolK8sLab < Formula
   end
 
   resource "ruamel-yaml-clib" do
-    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa0240c53a7218c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
+    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa02.1.03a7218c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
     sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
   end
 
   resource "smol_k8s_lab" do
-    url "https://files.pythonhosted.org/packages/d0/61/9fdd1ea17fb58e92206cf55ebe7046f9141f5dc98666ed33cd0868a6a7e4/smol_k8s_lab-2.0.5.tar.gz"
+    url "https://files.pythonhosted.org/packages/d0/61/9fdd1ea17fb58e92206cf55ebe7046f9141f5dc98666ed33cd0868a6a7e4/smol_k8s_lab-2.1.0.tar.gz"
     sha256 "9c53628d628d804f11b10c106dd948c577f8de0a4bf540f0ea2f47165716b7a5"
   end
 
