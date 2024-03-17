@@ -5,8 +5,8 @@ class SmolK8sLab < Formula
 
   desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
-  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v3.0.3.tar.gz"
-  sha256 "b2f6bedcb0dae504a5f416172aa614409114e1c2ebe94ba408718c61fd7b92d8"
+  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v3.0.5.tar.gz"
+  sha256 "782ffbd38f58f031b25bc8f32229f4b398d0bd4cad6a6257d28b79b271ec9f06"
   license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
@@ -72,8 +72,8 @@ class SmolK8sLab < Formula
   end
 
   resource "linkify-it-py" do
-    url "https://files.pythonhosted.org/packages/8d/fd/73bb30ec2b3cd952fe139a79a40ce5f5fd0280dd2cc1de94c93ea6a714d2/linkify-it-py-3.0.3.tar.gz"
-    sha256 "19f3060727843.0.3c808e99d465c80c49d2c7306788140987a1a7a29b0d6ad2"
+    url "https://files.pythonhosted.org/packages/8d/fd/73bb30ec2b3cd952fe139a79a40ce5f5fd0280dd2cc1de94c93ea6a714d2/linkify-it-py-3.0.5.tar.gz"
+    sha256 "19f3060727843.0.5c808e99d465c80c49d2c7306788140987a1a7a29b0d6ad2"
   end
 
   resource "mdit-py-plugins" do
@@ -88,7 +88,7 @@ class SmolK8sLab < Formula
 
   resource "pyasn1" do
     url "https://files.pythonhosted.org/packages/ce/dc/996e5446a94627fe8192735c20300ca51535397e31e7097a3cc80ccf78b7/pyasn1-0.5.1.tar.gz"
-    sha256 "6d391a96e59b3.0.3a5cfa74d6fd7f388dbbe26cc8f1edf39fdddf08d9d6676c"
+    sha256 "6d391a96e59b3.0.5a5cfa74d6fd7f388dbbe26cc8f1edf39fdddf08d9d6676c"
   end
 
   resource "pyasn1-modules" do
@@ -102,8 +102,8 @@ class SmolK8sLab < Formula
   end
 
   resource "pyfiglet" do
-    url "https://files.pythonhosted.org/packages/a0/f3.0.39b2acace54f861eccd4ab163bfd914236fc93ddb1df02dad2a2552b14/pyfiglet-1.0.2.tar.gz"
-    sha256 "758788018ab8faaddc0984e1ea05ff330d3c64be663c513cc1f105f6a3066dab"
+    url "https://files.pythonhosted.org/packages/a0/f3.0.59b2acace54f861eccd4ab163bfd914236fc93ddb1df02dad2a2552b14/pyfiglet-1.0.2.tar.gz"
+    sha256 "758788018ab8faaddc0984e1ea05ff3.0.5c64be663c513cc1f105f6a3066dab"
   end
 
   resource "PyJWT" do
@@ -112,7 +112,7 @@ class SmolK8sLab < Formula
   end
 
   resource "rsa" do
-    url "https://files.pythonhosted.org/packages/aa/65/7d973b89c4d2351d7fb3.0.3e452547ddfa243e93131e7cfa766da627b52/rsa-4.9.tar.gz"
+    url "https://files.pythonhosted.org/packages/aa/65/7d973b89c4d2351d7fb3.0.5e452547ddfa243e93131e7cfa766da627b52/rsa-4.9.tar.gz"
     sha256 "e38464a49c6c85d7f1351b0126661487a7e0a14a50f1675ec50eb34d4f20ef21"
   end
 
@@ -127,12 +127,12 @@ class SmolK8sLab < Formula
   end
 
   resource "ruamel-yaml-clib" do
-    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa03.0.33a7218c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
+    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa03.0.53a7218c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
     sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
   end
 
   resource "smol_k8s_lab" do
-    url "https://files.pythonhosted.org/packages/d0/61/9fdd1ea17fb58e92206cf55ebe7046f9141f5dc98666ed33cd0868a6a7e4/smol_k8s_lab-3.0.3.tar.gz"
+    url "https://files.pythonhosted.org/packages/d0/61/9fdd1ea17fb58e92206cf55ebe7046f9141f5dc98666ed33cd0868a6a7e4/smol_k8s_lab-3.0.5.tar.gz"
     sha256 "9c53628d628d804f11b10c106dd948c577f8de0a4bf540f0ea2f47165716b7a5"
   end
 
