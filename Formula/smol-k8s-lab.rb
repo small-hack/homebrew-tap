@@ -5,8 +5,8 @@ class SmolK8sLab < Formula
 
   desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
-  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v3.1.0.tar.gz"
-  sha256 "45931081d2078298f7f1ffdb515fa09ff488ed029f60333e7bc41dcbaaf21e4c"
+  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v3.2.1.tar.gz"
+  sha256 "006ab45ca477b18729648515b6dff8b9b5899ca9aa4792aef9a104d7309cec7f"
   license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
@@ -62,13 +62,13 @@ class SmolK8sLab < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/9a/a7/96f6b41c736ac080844a96d34896019127427e66f59d6b03e001d243c6c6/google-auth-2.26.2.tar.gz"
-    sha256 "97327dbbf58cccb58fc5a1712bba403ae76668e64814eb30f7316f7e27126b81"
+    url "https://files.pythonhosted.org/packages/18/b2/f14129111cfd61793609643a07ecb03651a71dd65c6974f63b0310ff4b45/google-auth-2.29.0.tar.gz"
+    sha256 "672dff332d073227550ffc7457868ac4218d6c500b155fe6cc17d2b13602c360"
   end
 
   resource "kubernetes" do
-    url "https://files.pythonhosted.org/packages/3c/5e/d27f39f447137a9a3d1f31142c77ce74bcedfda7dafe922d725c7ef2da33/kubernetes-28.1.0.tar.gz"
-    sha256 "1468069a573430fb1cb5ad22876868f57977930f80a6749405da31cd6086a7e9"
+    url "https://files.pythonhosted.org/packages/de/07/d01320a808abaab3426db63476adcb31f7e23fe8c08aef175d7883ea978a/kubernetes-29.0.0.tar.gz"
+    sha256 "c4812e227ae74d07d53c88293e564e54b850452715a59a927e7e1bc6b9a60459"
   end
 
   resource "linkify-it-py" do
@@ -82,8 +82,8 @@ class SmolK8sLab < Formula
   end
 
   resource "minio" do
-    url "https://files.pythonhosted.org/packages/e6/c7/950147020974e70524e83a300ff67f5dc2758bea421f44fe171ac9ca0c66/minio-7.2.3.tar.gz"
-    sha256 "4971dfb1a71eeefd38e1ce2dc7edc4e6eb0f07f1c1d6d70c15457e3280cfc4b9"
+    url "https://files.pythonhosted.org/packages/21/8f/bb5090471700cb300c15c296928035627b6ce8fcd2c1668a963a555ae9b7/minio-7.2.5.tar.gz"
+    sha256 "59d8906e2da248a9caac34d4958a859cc3a44abbe6447910c82b5abfa9d6a2e1"
   end
 
   resource "pyasn1" do
@@ -117,8 +117,8 @@ class SmolK8sLab < Formula
   end
 
   resource "ruamel-yaml" do
-    url "https://files.pythonhosted.org/packages/82/43/fa976e03a4a9ae406904489119cd7dd4509752ca692b2e0a19491ca1782c/ruamel.yaml-0.18.5.tar.gz"
-    sha256 "61917e3a35a569c1133a8f772e1226961bf5a1198bea7e23f06a0841dea1ab0e"
+    url "https://files.pythonhosted.org/packages/29/81/4dfc17eb6ebb1aac314a3eb863c1325b907863a1b8b1382cdffcb6ac0ed9/ruamel.yaml-0.18.6.tar.gz"
+    sha256 "8b27e6a217e786c6fbe5634d8f3f11bc63e0f80f6a5890f28863d9c45aac311b"
   end
 
   resource "ruamel-yaml-string" do
@@ -132,18 +132,18 @@ class SmolK8sLab < Formula
   end
 
   resource "smol_k8s_lab" do
-    url "https://files.pythonhosted.org/packages/d0/61/9fdd1ea17fb58e92206cf55ebe7046f9141f5dc98666ed33cd0868a6a7e4/smol_k8s_lab-3.1.0.tar.gz"
-    sha256 "9c53628d628d804f11b10c106dd948c577f8de0a4bf540f0ea2f47165716b7a5"
+    url "https://files.pythonhosted.org/packages/27/88/4da54438169e5b5b3f47aac72975778050bcc4e4490eb302974ce929d964/smol_k8s_lab-3.2.1.tar.gz"
+    sha256 "006ab45ca477b18729648515b6dff8b9b5899ca9aa4792aef9a104d7309cec7f"
   end
 
   resource "textual" do
-    url "https://files.pythonhosted.org/packages/24/51/57eb835afc9569d32b5979ecbf3bf73f8ece8700ebffab3bac7ff29f92e4/textual-0.47.1.tar.gz"
-    sha256 "4b82e317884bb1092f693f474c319ceb068b5a0b128b121f1aa53a2d48b4b80c"
+    url "https://files.pythonhosted.org/packages/59/f4/3df30a59ae3fe915c4311a93646fc184be19999e6e5d828831d4cfe53851/textual-0.53.1.tar.gz"
+    sha256 "23ba673be7974819ded35ea88d28df7117987e53d58f15b2cc890ac2ecf56401"
   end
 
   resource "uc-micro-py" do
-    url "https://files.pythonhosted.org/packages/75/db/241444fe6df6970a4c18d227193cad77fab7cec55d98e296099147de017f/uc-micro-py-1.0.2.tar.gz"
-    sha256 "30ae2ac9c49f39ac6dce743bd187fcd2b574b16ca095fa74cd9396795c954c54"
+    url "https://files.pythonhosted.org/packages/91/7a/146a99696aee0609e3712f2b44c6274566bc368dfe8375191278045186b8/uc-micro-py-1.0.3.tar.gz"
+    sha256 "d321b92cff673ec58027c04015fcaa8bb1e005478643ff4a500882eaab88c48a"
   end
 
   resource "xdg-base-dirs" do
