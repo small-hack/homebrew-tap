@@ -5,8 +5,8 @@ class SmolK8sLab < Formula
 
   desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
-  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v3.2.1.tar.gz"
-  sha256 "006ab45ca477b18729648515b6dff8b9b5899ca9aa4792aef9a104d7309cec7f"
+  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v3.2.2.tar.gz"
+  sha256 "15b1a7a799b78025f57569276afa171dca29e5b345c6c4b46115f73fe70ba9a1"
   license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
@@ -132,8 +132,8 @@ class SmolK8sLab < Formula
   end
 
   resource "smol_k8s_lab" do
-    url "https://files.pythonhosted.org/packages/27/88/4da54438169e5b5b3f47aac72975778050bcc4e4490eb302974ce929d964/smol_k8s_lab-3.2.1.tar.gz"
-    sha256 "006ab45ca477b18729648515b6dff8b9b5899ca9aa4792aef9a104d7309cec7f"
+    url "https://files.pythonhosted.org/packages/27/88/4da54438169e5b5b3f47aac72975778050bcc4e4490eb302974ce929d964/smol_k8s_lab-3.2.2.tar.gz"
+    sha256 "15b1a7a799b78025f57569276afa171dca29e5b345c6c4b46115f73fe70ba9a1"
   end
 
   resource "textual" do
