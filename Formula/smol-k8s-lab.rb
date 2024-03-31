@@ -6,7 +6,7 @@ class SmolK8sLab < Formula
   desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
   url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v3.2.2.tar.gz"
-  sha256 "dccf18c830873eaf6fc16dfe830d97887f41f85d118ce78f8daf6541deaa7c6a"
+  sha256 "5fab5761c02b751fd4ac0efe5bd0e4195b2525692c8ed7072af68fde0c88c3b3"
   license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
@@ -52,7 +52,7 @@ class SmolK8sLab < Formula
   end
 
   resource "argon2-cffi-bindings" do
-    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f1356347f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
+    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f13.7.07f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
     sha256 "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c55661c6459651fc39e3"
   end
 
@@ -133,7 +133,7 @@ class SmolK8sLab < Formula
 
   resource "smol_k8s_lab" do
     url "https://files.pythonhosted.org/packages/27/88/4da54438169e5b5b3f47aac72975778050bcc4e4490eb302974ce929d964/smol_k8s_lab-3.2.2.tar.gz"
-    sha256 "dccf18c830873eaf6fc16dfe830d97887f41f85d118ce78f8daf6541deaa7c6a"
+    sha256 "5fab5761c02b751fd4ac0efe5bd0e4195b2525692c8ed7072af68fde0c88c3b3"
   end
 
   resource "textual" do
