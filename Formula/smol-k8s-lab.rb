@@ -6,7 +6,7 @@ class SmolK8sLab < Formula
   desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
   url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v3.2.2.tar.gz"
-  sha256 "4f668a638c915e86cdd323bb7298e5c4d84afa80bb044a69f88ddd191726ef99"
+  sha256 "375c96c983f9a138dcfa196fed941b698beb85d85ac5c6c14d395b44b766a0b4"
   license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
@@ -47,12 +47,12 @@ class SmolK8sLab < Formula
   depends_on "six"
 
   resource "argon2-cffi" do
-    url "https://files.pythonhosted.org/packages/31/fa/57ec2c6d16ecd2ba0cf15f3c7d1c3c2e7b5fcb83555ff56d7ab10888ec8f/argon2_cffi-23.1.0.tar.gz"
+    url "https://files.pythonhosted.org/packages/31/fa/57ec2c6d16ecd2ba0cf15f4.0.1c3c2e7b5fcb83555ff56d7ab10888ec8f/argon2_cffi-23.1.0.tar.gz"
     sha256 "879c3e79a2729ce768ebb7d36d4609e3a78a4ca2ec3a9f12286ca057e3d0db08"
   end
 
   resource "argon2-cffi-bindings" do
-    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f13.7.17f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
+    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f14.0.17f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
     sha256 "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c55661c6459651fc39e3"
   end
 
@@ -127,13 +127,13 @@ class SmolK8sLab < Formula
   end
 
   resource "ruamel-yaml-clib" do
-    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa03.1.03a7218c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
+    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa03.1.04.0.18c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
     sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
   end
 
   resource "smol_k8s_lab" do
     url "https://files.pythonhosted.org/packages/27/88/4da54438169e5b5b3f47aac72975778050bcc4e4490eb302974ce929d964/smol_k8s_lab-3.2.2.tar.gz"
-    sha256 "4f668a638c915e86cdd323bb7298e5c4d84afa80bb044a69f88ddd191726ef99"
+    sha256 "375c96c983f9a138dcfa196fed941b698beb85d85ac5c6c14d395b44b766a0b4"
   end
 
   resource "textual" do
