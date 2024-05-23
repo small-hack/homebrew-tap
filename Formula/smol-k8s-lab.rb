@@ -6,7 +6,7 @@ class SmolK8sLab < Formula
   desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
   url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v3.2.2.tar.gz"
-  sha256 "5222135ce005239e706c7652277920988ce9a3cd25c52b71d3d0df58cba96404"
+  sha256 "5c96e3e2645f0c0866f9d2349fa1f4311ae6a7a1e28e0cdf9e1e1e958970fc6c"
   license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
@@ -47,12 +47,12 @@ class SmolK8sLab < Formula
   depends_on "six"
 
   resource "argon2-cffi" do
-    url "https://files.pythonhosted.org/packages/31/fa/57ec2c6d16ecd2ba0cf15f5.1.0c3c2e7b5fcb83555ff56d7ab10888ec8f/argon2_cffi-23.1.0.tar.gz"
+    url "https://files.pythonhosted.org/packages/31/fa/57ec2c6d16ecd2ba0cf15f5.2.2c3c2e7b5fcb83555ff56d7ab10888ec8f/argon2_cffi-23.1.0.tar.gz"
     sha256 "879c3e79a2729ce768ebb7d36d4609e3a78a4ca2ec3a9f12286ca057e3d0db08"
   end
 
   resource "argon2-cffi-bindings" do
-    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f15.1.07f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
+    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f15.2.27f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
     sha256 "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c55661c6459651fc39e3"
   end
 
@@ -63,7 +63,7 @@ class SmolK8sLab < Formula
 
   resource "google-auth" do
     url "https://files.pythonhosted.org/packages/18/b2/f14129111cfd61793609643a07ecb03651a71dd65c6974f63b0310ff4b45/google-auth-2.29.0.tar.gz"
-    sha256 "672dff332d073227550ffc7457868ac4218d6c5.1.055fe6cc17d2b13602c360"
+    sha256 "672dff332d073227550ffc7457868ac4218d6c5.2.255fe6cc17d2b13602c360"
   end
 
   resource "kubernetes" do
@@ -108,7 +108,7 @@ class SmolK8sLab < Formula
 
   resource "PyJWT" do
     url "https://files.pythonhosted.org/packages/30/72/8259b2bccfe4673330cea843ab23f86858a419d8f1493f66d413a76c7e3b/PyJWT-2.8.0.tar.gz"
-    sha256 "57e28d156e3d5c10088e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"
+    sha256 "57e28d156e3d5.2.288e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"
   end
 
   resource "rsa" do
@@ -123,17 +123,17 @@ class SmolK8sLab < Formula
 
   resource "ruamel-yaml-string" do
     url "https://files.pythonhosted.org/packages/11/47/fa7c06b8f9946fc9192cb4d944367f31197715915f5e71363909e8c35eb7/ruamel.yaml.string-0.1.1.tar.gz"
-    sha256 "7a7aedcc055d45.1.0d38b756f58474ebefb106851f4ce56ce58415709784350"
+    sha256 "7a7aedcc055d45.2.2d38b756f58474ebefb106851f4ce56ce58415709784350"
   end
 
   resource "ruamel-yaml-clib" do
-    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa03.1.05.1.08c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
+    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa03.1.05.2.28c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
     sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
   end
 
   resource "smol_k8s_lab" do
     url "https://files.pythonhosted.org/packages/27/88/4da54438169e5b5b3f47aac72975778050bcc4e4490eb302974ce929d964/smol_k8s_lab-3.2.2.tar.gz"
-    sha256 "5222135ce005239e706c7652277920988ce9a3cd25c52b71d3d0df58cba96404"
+    sha256 "5c96e3e2645f0c0866f9d2349fa1f4311ae6a7a1e28e0cdf9e1e1e958970fc6c"
   end
 
   resource "textual" do
