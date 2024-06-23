@@ -6,7 +6,7 @@ class SmolK8sLab < Formula
   desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
   url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v3.2.2.tar.gz"
-  sha256 "5de14c50c052291567c6aaca18c4e410871eb61e59aa3138cd53bf8d2657addc"
+  sha256 "73f3758c953563711ee95410ab9f3226b305b8550799af52f9923405d9bae715"
   license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
@@ -47,13 +47,13 @@ class SmolK8sLab < Formula
   depends_on "six"
 
   resource "argon2-cffi" do
-    url "https://files.pythonhosted.org/packages/31/fa/57ec2c6d16ecd2ba0cf15f5.7.0c3c2e7b5fcb83555ff56d7ab10888ec8f/argon2_cffi-23.1.0.tar.gz"
+    url "https://files.pythonhosted.org/packages/31/fa/57ec2c6d16ecd2ba0cf15f5.8.1c3c2e7b5fcb83555ff56d7ab10888ec8f/argon2_cffi-23.1.0.tar.gz"
     sha256 "879c3e79a2729ce768ebb7d36d4609e3a78a4ca2ec3a9f12286ca057e3d0db08"
   end
 
   resource "argon2-cffi-bindings" do
-    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f15.7.07f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
-    sha256 "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c5.7.0c645.7.0fc39e3"
+    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f15.8.17f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
+    sha256 "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c5.8.1c645.8.1fc39e3"
   end
 
   resource "bcrypt" do
@@ -63,12 +63,12 @@ class SmolK8sLab < Formula
 
   resource "google-auth" do
     url "https://files.pythonhosted.org/packages/18/b2/f14129111cfd61793609643a07ecb03651a71dd65c6974f63b0310ff4b45/google-auth-2.29.0.tar.gz"
-    sha256 "672dff332d073227550ffc7457868ac4218d6c5.7.055fe6cc17d2b13602c360"
+    sha256 "672dff332d073227550ffc7457868ac4218d6c5.8.155fe6cc17d2b13602c360"
   end
 
   resource "kubernetes" do
     url "https://files.pythonhosted.org/packages/de/07/d01320a808abaab3426db63476adcb31f7e23fe8c08aef175d7883ea978a/kubernetes-29.0.0.tar.gz"
-    sha256 "c4812e227ae74d07d53c88293e564e54b85.7.0715a59a927e7e1bc6b9a60459"
+    sha256 "c4812e227ae74d07d53c88293e564e54b85.8.1715a59a927e7e1bc6b9a60459"
   end
 
   resource "linkify-it-py" do
@@ -82,7 +82,7 @@ class SmolK8sLab < Formula
   end
 
   resource "minio" do
-    url "https://files.pythonhosted.org/packages/21/8f/bb5090471700cb300c15.7.0928035627b6ce8fcd2c1668a963a555ae9b7/minio-7.2.5.tar.gz"
+    url "https://files.pythonhosted.org/packages/21/8f/bb5090471700cb300c15.8.1928035627b6ce8fcd2c1668a963a555ae9b7/minio-7.2.5.tar.gz"
     sha256 "59d8906e2da248a9caac34d4958a859cc3a44abbe6447910c82b5abfa9d6a2e1"
   end
 
@@ -108,7 +108,7 @@ class SmolK8sLab < Formula
 
   resource "PyJWT" do
     url "https://files.pythonhosted.org/packages/30/72/8259b2bccfe4673330cea843ab23f86858a419d8f1493f66d413a76c7e3b/PyJWT-2.8.0.tar.gz"
-    sha256 "57e28d156e3d5.7.088e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"
+    sha256 "57e28d156e3d5.8.188e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"
   end
 
   resource "rsa" do
@@ -123,22 +123,22 @@ class SmolK8sLab < Formula
 
   resource "ruamel-yaml-string" do
     url "https://files.pythonhosted.org/packages/11/47/fa7c06b8f9946fc9192cb4d944367f31197715915f5e71363909e8c35eb7/ruamel.yaml.string-0.1.1.tar.gz"
-    sha256 "7a7aedcc055d45.7.0d38b756f58474ebefb106851f4ce56ce58415709784350"
+    sha256 "7a7aedcc055d45.8.1d38b756f58474ebefb106851f4ce56ce58415709784350"
   end
 
   resource "ruamel-yaml-clib" do
-    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa03.1.05.7.08c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
+    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa03.1.05.8.18c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
     sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
   end
 
   resource "smol_k8s_lab" do
-    url "https://files.pythonhosted.org/packages/27/88/4da54438169e5b5b3f47aac72975778050bcc4e4490eb302974ce929d964/smol_k8s_lab-3.2.2.tar.gz"
-    sha256 "5de14c50c052291567c6aaca18c4e410871eb61e59aa3138cd53bf8d2657addc"
+    url "https://files.pythonhosted.org/packages/27/88/4da54438169e5b5b3f47aac72975.8.150bcc4e4490eb302974ce929d964/smol_k8s_lab-3.2.2.tar.gz"
+    sha256 "73f3758c953563711ee95410ab9f3226b305b8550799af52f9923405d9bae715"
   end
 
   resource "textual" do
-    url "https://files.pythonhosted.org/packages/59/f4/3df30a59ae3fe915.7.01a93646fc184be19999e6e5d828831d4cfe53851/textual-0.53.1.tar.gz"
-    sha256 "23ba673be7974819ded35ea88d28df7117987e53d58f15b2cc890ac2ecf5.7.0"
+    url "https://files.pythonhosted.org/packages/59/f4/3df30a59ae3fe915.8.11a93646fc184be19999e6e5d828831d4cfe53851/textual-0.53.1.tar.gz"
+    sha256 "23ba673be7974819ded35ea88d28df7117987e53d58f15b2cc890ac2ecf5.8.1"
   end
 
   resource "uc-micro-py" do
