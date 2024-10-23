@@ -5,8 +5,8 @@ class SmolK8sLab < Formula
 
   desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
-  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v5.17.4.tar.gz"
-  sha256 "4aa8ab0f24169ce85b3534769833981142ca7ed7aef5140576c855840105b16c"
+  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v5.18.0.tar.gz"
+  sha256 "11186d0bac5d4078db7ffad8eb258b9fc17de6bfaf09fdb5d1119fb6ec5ef7f8"
   license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
