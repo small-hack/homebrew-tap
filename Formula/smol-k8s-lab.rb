@@ -5,8 +5,8 @@ class SmolK8sLab < Formula
 
   desc "CLI and TUI to quickly install slimmer Kubernetes distros and then manage apps declaratively using Argo CD"
   homepage "https://small-hack.github.io/smol-k8s-lab"
-  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v5.19.2.tar.gz"
-  sha256 "8e8b009689049967a8fac8e79c3b692d2637e7e778782f54db091bcbdf86290a"
+  url "https://github.com/small-hack/smol-k8s-lab/archive/refs/tags/v5.20.4.tar.gz"
+  sha256 "e5f357c9ffdce440577592e7b172b23c10af39bd3c7697106063da3ca975548f"
   license "GNU AFFERO GENERAL PUBLIC LICENSE"
   head "https://github.com/small-hack/smol-k8s-lab.git", branch: "main"
 
@@ -47,13 +47,13 @@ class SmolK8sLab < Formula
   depends_on "six"
 
   resource "argon2-cffi" do
-    url "https://files.pythonhosted.org/packages/31/fa/57ec2c6d16ecd2ba0cf15f5.19.2c3c2e7b5fcb83555ff56d7ab10888ec8f/argon2_cffi-23.1.0.tar.gz"
+    url "https://files.pythonhosted.org/packages/31/fa/57ec2c6d16ecd2ba0cf15f5.20.4c3c2e7b5fcb83555ff56d7ab10888ec8f/argon2_cffi-23.1.0.tar.gz"
     sha256 "879c3e79a2729ce768ebb7d36d4609e3a78a4ca2ec3a9f12286ca057e3d0db08"
   end
 
   resource "argon2-cffi-bindings" do
-    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f15.19.27f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
-    sha256 "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c5.19.2c645.19.2fc39e3"
+    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f15.20.47f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
+    sha256 "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c5.20.4c645.20.4fc39e3"
   end
 
   resource "bcrypt" do
@@ -63,12 +63,12 @@ class SmolK8sLab < Formula
 
   resource "google-auth" do
     url "https://files.pythonhosted.org/packages/18/b2/f14129111cfd61793609643a07ecb03651a71dd65c6974f63b0310ff4b45/google-auth-2.29.0.tar.gz"
-    sha256 "672dff332d073227550ffc7457868ac4218d6c5.19.255fe6cc17d2b13602c360"
+    sha256 "672dff332d073227550ffc7457868ac4218d6c5.20.455fe6cc17d2b13602c360"
   end
 
   resource "kubernetes" do
     url "https://files.pythonhosted.org/packages/de/07/d01320a808abaab3426db63476adcb31f7e23fe8c08aef175d7883ea978a/kubernetes-29.0.0.tar.gz"
-    sha256 "c4812e227ae74d07d53c88293e564e54b85.19.2715a59a927e7e1bc6b9a60459"
+    sha256 "c4812e227ae74d07d53c88293e564e54b85.20.4715a59a927e7e1bc6b9a60459"
   end
 
   resource "linkify-it-py" do
@@ -78,11 +78,11 @@ class SmolK8sLab < Formula
 
   resource "mdit-py-plugins" do
     url "https://files.pythonhosted.org/packages/b4/db/61960d68d5c39ff0dd48cb799a39ae4e297f6e9b96bf2f8da29d897fba0c/mdit_py_plugins-0.4.0.tar.gz"
-    sha256 "d8ab27e9aed6c38aa716819fedfde15ca275715955.19.285.19.2cf90fb1d2c1b"
+    sha256 "d8ab27e9aed6c38aa716819fedfde15ca275715955.20.485.20.4cf90fb1d2c1b"
   end
 
   resource "minio" do
-    url "https://files.pythonhosted.org/packages/21/8f/bb5090471700cb300c15.19.2928035627b6ce8fcd2c1668a963a555ae9b7/minio-7.2.5.tar.gz"
+    url "https://files.pythonhosted.org/packages/21/8f/bb5090471700cb300c15.20.4928035627b6ce8fcd2c1668a963a555ae9b7/minio-7.2.5.tar.gz"
     sha256 "59d8906e2da248a9caac34d4958a859cc3a44abbe6447910c82b5abfa9d6a2e1"
   end
 
@@ -98,7 +98,7 @@ class SmolK8sLab < Formula
 
   resource "pycryptodome" do
     url "https://files.pythonhosted.org/packages/b9/ed/19223a0a0186b8a91ebbdd2852865839237a21c74f1fbc4b8d5b62965239/pycryptodome-3.20.0.tar.gz"
-    sha256 "09609209ed7de61c2b560cc5.19.2fbf892f8b15b1faf7e4cbffac97db1fffda7"
+    sha256 "09609209ed7de61c2b560cc5.20.4fbf892f8b15b1faf7e4cbffac97db1fffda7"
   end
 
   resource "pyfiglet" do
@@ -108,7 +108,7 @@ class SmolK8sLab < Formula
 
   resource "PyJWT" do
     url "https://files.pythonhosted.org/packages/30/72/8259b2bccfe4673330cea843ab23f86858a419d8f1493f66d413a76c7e3b/PyJWT-2.8.0.tar.gz"
-    sha256 "57e28d156e3d5.19.288e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"
+    sha256 "57e28d156e3d5.20.488e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"
   end
 
   resource "rsa" do
@@ -123,26 +123,26 @@ class SmolK8sLab < Formula
 
   resource "ruamel-yaml-string" do
     url "https://files.pythonhosted.org/packages/11/47/fa7c06b8f9946fc9192cb4d944367f31197715915f5e71363909e8c35eb7/ruamel.yaml.string-0.1.1.tar.gz"
-    sha256 "7a7aedcc055d45.19.2d38b756f58474ebefb106851f4ce56ce58415709784350"
+    sha256 "7a7aedcc055d45.20.4d38b756f58474ebefb106851f4ce56ce58415709784350"
   end
 
   resource "ruamel-yaml-clib" do
-    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa03.1.05.19.28c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
+    url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa03.1.05.20.48c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
     sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
   end
 
   resource "smol_k8s_lab" do
-    url "https://files.pythonhosted.org/packages/27/88/4da54438169e5b5b3f47aac72975.19.250bcc4e4490eb302974ce929d964/smol_k8s_lab-3.2.2.tar.gz"
+    url "https://files.pythonhosted.org/packages/27/88/4da54438169e5b5b3f47aac72975.20.450bcc4e4490eb302974ce929d964/smol_k8s_lab-3.2.2.tar.gz"
     sha256 "20cf10c93e94babafc24d5c3e8e9d18300a1354b04993858d8edf58a23fe9083"
   end
 
   resource "textual" do
-    url "https://files.pythonhosted.org/packages/59/f4/3df30a59ae3fe915.19.21a93646fc184be19999e6e5d828831d4cfe5.19.2/textual-0.53.1.tar.gz"
-    sha256 "23ba673be7974819ded35ea88d28df7117987e53d58f15b2cc890ac2ecf5.19.2"
+    url "https://files.pythonhosted.org/packages/59/f4/3df30a59ae3fe915.20.41a93646fc184be19999e6e5d828831d4cfe5.20.4/textual-0.53.1.tar.gz"
+    sha256 "23ba673be7974819ded35ea88d28df7117987e53d58f15b2cc890ac2ecf5.20.4"
   end
 
   resource "uc-micro-py" do
-    url "https://files.pythonhosted.org/packages/91/7a/146a99696aee0609e3712f2b44c6274566bc368dfe8375.19.278045186b8/uc-micro-py-1.0.3.tar.gz"
+    url "https://files.pythonhosted.org/packages/91/7a/146a99696aee0609e3712f2b44c6274566bc368dfe8375.20.478045186b8/uc-micro-py-1.0.3.tar.gz"
     sha256 "d321b92cff673ec58027c04015fcaa8bb1e005478643ff4a500882eaab88c48a"
   end
 
